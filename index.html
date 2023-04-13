@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Flemme de parler</title>
+</head>
+
+<body>
+    <label for="voice-select">Choix des Voix :</label>
+    <select id="voice-select"></select>
+    <textarea id="text" placeholder="Tape ton texte..." oninput="updateStats()"></textarea>
+    <ul id="stats">
+        <li>Nombre de caractères (avec espaces) : <span id="char-count">0</span></li>
+        <li>Nombre de caractères (sans espaces) : <span id="char-count-no-spaces">0</span></li>
+        <li>Nombre de mots : <span id="word-count">0</span></li>
+    </ul>
+    <div>
+        <button onclick="read()">Lire</button>
+        <button onclick="clearInput()">Reset</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
